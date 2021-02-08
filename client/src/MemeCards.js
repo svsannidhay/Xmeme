@@ -15,7 +15,7 @@ const MemeCard = () => {
   console.log(meme);
   return (
     <div>
-      MemeCard;
+      MemeCard
     </div>
   );
 }

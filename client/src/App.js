@@ -1,10 +1,12 @@
 import React from 'react';
 import MemeCards from './MemeCards';
+import Header from './Header';
+import './App.css';
 
 function App () {
   return (
-    <div>
-      <h1>Working</h1>
+    <div className="app">
+      <Header/>
       <MemeCards/>
     </div>
   );
