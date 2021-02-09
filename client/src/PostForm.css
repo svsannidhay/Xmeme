@@ -1,4 +1,6 @@
 .postForm {
+  padding-top:150px;
+  transform: translateY(-200px);
   background-color: rgb(243, 243, 243);
 }
 .input-form {
@@ -6,7 +8,7 @@
 }
 .input-field {
   display: block;
-  margin: 10px 0;
+  margin: 15px 0;
   padding: 15px;
   width:400px;
   font-size: 15px;
