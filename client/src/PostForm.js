@@ -1,12 +1,7 @@
 import React from 'react'
 import './Grid.css';
 import './PostForm.css';
-
-const card = {
-  name: "",
-  caption: "",
-  imgUrl: "",
-}
+import axios from './axios';
 
 class PostForm extends React.Component {
 
@@ -18,6 +13,7 @@ class PostForm extends React.Component {
       imgUrl: "",
     }
     this.onInputChange = this.onInputChange.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
   onInputChange (event) {
@@ -26,17 +22,20 @@ class PostForm extends React.Component {
     });
     console.log(this.state);
   }
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   console.log(event.target);
-  // }
+  
+  onFormSubmit (event) {
+    event.preventDefault();
+    console.log(this.state);
+    axios.post("/cards",this.state);
+  }
+
   render() {
     return(
       <section className="postForm ">
       <div className="container">
         <div className="input-form container col span-1-of-2">
           <h3 className="postForm-text">Post a meme</h3>
-          <form>
+          <form onSubmit = {this.onFormSubmit}>
             <input className ="input-field input-name" type="text"
               placeholder = "Name" value = {this.state.name} 
               name = "name"
@@ -52,7 +51,8 @@ class PostForm extends React.Component {
               name ="imgUrl"
               onChange = {this.onInputChange}
             />
-            <button type="submit">Submit</button>
+            <button className="input-button" 
+            type="submit">Submit</button>
           </form>
         </div>
         <div className="col span-1-of-2">
