@@ -1,0 +1,31 @@
+.postForm {
+  background-color: rgb(243, 243, 243);
+}
+.input-form {
+  padding: 40px;
+}
+.input-field {
+  display: block;
+  margin: 10px 0;
+  padding: 15px;
+  width:400px;
+  font-size: 15px;
+  border: 1px solid #555;
+  border-radius: 7px;
+  outline: none;
+  transition: all 0.3s;
+}
+.input-field:hover{
+  transform: scale(1.05);
+  border: 1px solid #55c57a;
+}
+.input-field:focus {
+  border: 1px solid #55c57a;
+  background-color: #e8ffe3;
+}
+.postForm-text {
+  font-size: 35px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
