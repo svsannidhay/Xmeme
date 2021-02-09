@@ -7,7 +7,7 @@ const MemeCard = () => {
   //ComponentDid Mount
   useEffect(() => {
     async function fetchData() {
-      const req = await axios.get("/cards");
+      const req = await axios.get("/memes");
       setMeme(req.data);
     }
     fetchData();
@@ -15,7 +15,9 @@ const MemeCard = () => {
   console.log(meme);
   return (
     <div>
-      MemeCard
+      {
+        
+      }
     </div>
   );
 }

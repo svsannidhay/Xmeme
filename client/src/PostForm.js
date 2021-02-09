@@ -11,7 +11,7 @@ class PostForm extends React.Component {
     this.state = {
       name: "",
       caption: "",
-      imgUrl: "",
+      url: "",
     }
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -27,7 +27,7 @@ class PostForm extends React.Component {
   onFormSubmit (event) {
     event.preventDefault();
     console.log(this.state);
-    axios.post("/cards",this.state);
+    axios.post("/memes",this.state);
   }
 
   render() {
@@ -50,8 +50,8 @@ class PostForm extends React.Component {
               required
             />
             <input className ="input-field filed input-url" type="text"
-              placeholder = "Meme Url" value = {this.state.imgUrl}
-              name ="imgUrl"
+              placeholder = "Meme Url" value = {this.state.url}
+              name ="url"
               onChange = {this.onInputChange}
               required
             />

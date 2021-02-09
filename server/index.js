@@ -25,18 +25,20 @@ con.on('open',() => console.log('connected...'));
 //API endpoints
 app.get('/',(req,res) => res.status(200).send("hello world"));
 
-app.post('/cards',(req,res) => {
+app.post('/memes',(req,res) => {
   const card = req.body;
   Cards.create(card,(err,data) => {
     if (err) {
       res.status(500).send(err);
+      let id = Cards._id;
+      res.end('Added the meme with id' + id);
     } else {
       res.status(201).send(data);
     }
   });
 });
 
-app.get('/cards',(req,res) => {
+app.get('/memes',(req,res) => {
   Cards.find((err,data) => {
     if (err) {
       res.status(500).send(err);
@@ -45,6 +47,15 @@ app.get('/cards',(req,res) => {
     }
   }); 
 });
-
+app.get('/memes/:id',(req,res) => {
+  console.log(req.params.id);
+  Cards.findById(req.params.id,(err,data) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  });
+});
 //Listener
 app.listen(port,() => console.log(`Listening on localhost: ${port}`));
