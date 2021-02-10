@@ -30,7 +30,7 @@
   rgba(0, 0, 0, 0.09) 0px 16px 8px,
   rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-.memeCard--Image img {
+.memeCard--image img {
   padding:20px;
   width:100%;
   height:auto;
