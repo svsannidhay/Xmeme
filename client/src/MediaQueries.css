@@ -1,0 +1,28 @@
+/*//////////////////////////////////////////////////////////////////////*/
+/*-----------------BIG TABLETS TO LAPTOPS--------1024px to 1200px------*/
+/*//////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 1200px) {
+  .container{width: 98%;}
+  .card{width:60%}
+  .heading-primary-main {font-size: 58px}
+  .heading-primary-sub {font-size: 19px;}
+}
+
+/*//////////////////////////////////////////////////////////////////////*/
+/*-----------------SMALL TABLETS TO LARGE TABLETS -------768px to 1023px-------*/
+/*//////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 1023px) {
+  .col{width:80%}
+  .card{width:65%}
+  .heading-primary-main {font-size: 55px}
+  .heading-primary-sub {font-size: 18px;}
+} 
+/*//////////////////////////////////////////////////////////////////////*/
+/*-----------------LARGE PHONES TO SMALL TABLETS ------- 481px to 767px-------*/
+/*//////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+  .col{width:98%}
+  .card{width:75%}
+    .heading-primary-main {font-size: 50px}
+  .heading-primary-sub {font-size: 16px;}
+}

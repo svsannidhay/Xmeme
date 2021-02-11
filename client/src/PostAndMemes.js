@@ -1,8 +1,7 @@
 import React from 'react'
-import PostForm from './PostForm';
-import MemeCards from './MemeCards';
+import PostForm from './components/PostForm';
+import MemeCards from './components/MemeCards';
 import axios from './axios';
-import forceUpdate from 'use-force-update';
 
 class PostAndMemes extends React.Component {
   constructor(props) {

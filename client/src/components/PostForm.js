@@ -1,12 +1,23 @@
 import React from 'react'
-import './Grid.css';
+import '../Grid.css';
 import './PostForm.css';
 import './Button.css';
 
 class PostForm extends React.Component {
+  
+  constructor(props){
+    super(props);
+    this.onButtonClick = this.onButtonClick.bind(this);
+  }
+
+  onButtonClick = () => {
+    let scrollToMemeForm = document.getElementById("wayPoint--memeCard");
+    scrollToMemeForm.scrollIntoView({behavior : "smooth"});
+  }
+
   render() {
     return(
-      <section className="postForm ">
+      <section id = "wayPoint--form" className="postForm ">
       <div className="container">
         <div className="input-form col span-1-of-2">
           <h3 className="postForm-text">Post a meme</h3>
@@ -29,7 +40,7 @@ class PostForm extends React.Component {
               onChange = {this.props.onInputChange}
               required
             />
-            <button className="btn" 
+            <button onClick = {this.onButtonClick} className="btn btn--green" 
             type="submit">Submit</button>
           </form>
         </div>
