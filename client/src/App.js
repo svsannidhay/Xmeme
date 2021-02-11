@@ -1,15 +1,13 @@
 import React from 'react';
-import MemeCards from './MemeCards';
 import Header from './Header';
-import PostForm from './PostForm';
+import PostAndMemes from './PostAndMemes';
 import './App.css';
 
 function App () {
   return (
     <div className="app">
       <Header/>
-      <PostForm/>
-      <MemeCards/>
+      <PostAndMemes/>
     </div>
   );
 }

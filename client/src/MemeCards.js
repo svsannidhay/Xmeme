@@ -3,41 +3,38 @@ import axios from './axios';
 import './Grid.css';
 import './MemeCard.css';
 import promise from 'promise';
-var obj = [];
 
+var obj = [];
 function Recent100(data){
+  let obj = [];
   let size = Math.min(100,data.length);
   for(let i=size-1;i>=0;i--){
     obj.push(data[i]);
   }
+  return obj;
 };
+// const fetchData = new promise(async function(resolve,reject){
+//   const req = await axios.get("/memes");
+//   console.log(req.data);
+//   Recent100(req.data);
+//   if(obj.length!==0){
+//     resolve();
+//   }
+// });
 
-const fetchData = new promise(async function(resolve,reject){
-  const req = await axios.get("/memes");
-  console.log(req.data);
-  Recent100(req.data);
-  if(obj.length!==0){
-    resolve();
-  }
-});
-
-
-const MemeCard = () => {
+const MemeCard = (props) => {
   const [meme,setMeme] = useState([]);
-  const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
-  function handleClick() {
-    forceUpdate();
-  }
-  //ComponentDid Mount
-  useEffect(() => {
-      fetchData.then(
-      () => {
-          setMeme(obj);
-          // console.log(meme);
-      }
-      );
-
-  },[meme]);
+  useEffect(async () => {
+    const req = await axios.get("/memes");
+    console.log(req.data);
+    setMeme(Recent100(req.data));
+    // fetchData.then(
+    // () => {
+    //   setMeme(obj);
+    // }
+    // );
+    console.log('render');
+  },[props.submitted]);
   return (
     <div className="memeCard">
       <div className="memeCard--heading">
