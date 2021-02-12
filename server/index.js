@@ -37,7 +37,6 @@ app.post('/memes',(req,res) => {
     }
   });
 });
-
 app.get('/memes',(req,res) => {
   Cards.find((err,data) => {
     if (err) {
