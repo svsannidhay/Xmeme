@@ -3,7 +3,7 @@
 ## Overview 
 > A Meme sharing platform, in which you can share memes by providing meme url and captions along with your name. 
 
-##Deployment :  <a href="https://svsannidhay.github.io/Line_Encoder/" target = "_blank" >** X M E M E **</a>
+##Deployment :  <a href="https://svsannidhay.github.io/Line_Encoder/" target = "_blank" >X M E M E</a>
 > Frontend is hosted on Firebase : https://xmeme-frontend-f18dd.web.app <br>
 > Backend is hosted on Heroku : https://xmeme-server3.herokuapp.com/  <br>
 
