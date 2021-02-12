@@ -17,20 +17,20 @@
 > Root folder contains two folders client and server. <br>
 ### client folder :
 > It contains all the front end code.<br>
-> In the src directory we have the root component index.js which renders App.js which in turn renders two components Header.js and PostAndMemes.js.
+> In the src directory we have the root component index.js which renders App.js which in turn renders two components Header.js and PostAndMemes.js.<br>
 > Header.js is present in /src/components along with Header.css.<br>
 > In the src directory there is a parent componenet PostAndMemes.js which in turn renders two components PostForm.js and MemeCards.js.<br>
 > PostForm.js and MemeCards.js are present in /src/componenrs along with PostForm.css and MemeCard.css.<br>
 ### server folder :
-> We have models which contains the data base models in this case dbCards.js which contains our dataBase schema.
-> We have index.js which is express server for setting up api endpoints.
+> We have models which contains the data base models in this case dbCards.js which contains our dataBase schema.<br>
+> We have index.js which is express server for setting up api endpoints.<br>
 
 ###Dependencies : 
 ####Frontend : 
 > React<br>
 > axios<br>
 ####Backend : 
-> Express
-> Mongoose
-> nodemon
-> cors
+> Express<br>
+> Mongoose<br>
+> nodemon<br>
+> cors<br>
